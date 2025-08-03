@@ -170,13 +170,9 @@ export default function Dashboard() {
             </div>
           </div>
           
-          {/* Placeholder for pie chart */}
-          <div className="h-80 bg-gradient-to-br from-success/10 to-info/10 rounded-lg flex items-center justify-center">
-            <div className="text-center">
-              <Target className="w-12 h-12 text-success mx-auto mb-3" />
-              <p className="text-muted-foreground">Pie Chart Component</p>
-              <p className="text-sm text-muted-foreground">Will be implemented next</p>
-            </div>
+          {/* Conversion Pie Chart */}
+          <div className="h-80">
+            <ConversionPieChart />
           </div>
         </div>
       </div>
