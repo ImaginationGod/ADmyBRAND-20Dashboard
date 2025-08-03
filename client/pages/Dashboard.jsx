@@ -124,40 +124,44 @@ export default function Dashboard() {
       </div>
 
       {/* Metrics Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-        <MetricsCard
-          title="Total Revenue"
-          value={data.metrics.revenue.value}
-          change={data.metrics.revenue.change}
-          changeType={data.metrics.revenue.changeType}
-          icon={DollarSign}
-          color="success"
-        />
-        <MetricsCard
-          title="Active Users"
-          value={data.metrics.users.value}
-          change={data.metrics.users.change}
-          changeType={data.metrics.users.changeType}
-          icon={Users}
-          color="info"
-        />
-        <MetricsCard
-          title="Conversions"
-          value={data.metrics.conversions.value}
-          change={data.metrics.conversions.change}
-          changeType={data.metrics.conversions.changeType}
-          icon={Target}
-          color="warning"
-        />
-        <MetricsCard
-          title="Growth Rate"
-          value={data.metrics.growth.value}
-          change={data.metrics.growth.change}
-          changeType={data.metrics.growth.changeType}
-          icon={TrendingUp}
-          color="brand"
-        />
-      </div>
+      {isLoading ? (
+        <MetricsSkeleton />
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <MetricsCard
+            title="Total Revenue"
+            value={data.metrics.revenue.value}
+            change={data.metrics.revenue.change}
+            changeType={data.metrics.revenue.changeType}
+            icon={DollarSign}
+            color="success"
+          />
+          <MetricsCard
+            title="Active Users"
+            value={data.metrics.users.value}
+            change={data.metrics.users.change}
+            changeType={data.metrics.users.changeType}
+            icon={Users}
+            color="info"
+          />
+          <MetricsCard
+            title="Conversions"
+            value={data.metrics.conversions.value}
+            change={data.metrics.conversions.change}
+            changeType={data.metrics.conversions.changeType}
+            icon={Target}
+            color="warning"
+          />
+          <MetricsCard
+            title="Growth Rate"
+            value={data.metrics.growth.value}
+            change={data.metrics.growth.change}
+            changeType={data.metrics.growth.changeType}
+            icon={TrendingUp}
+            color="brand"
+          />
+        </div>
+      )}
 
       {/* Charts Section */}
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
