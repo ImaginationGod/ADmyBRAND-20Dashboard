@@ -155,13 +155,9 @@ export default function Dashboard() {
             </Button>
           </div>
           
-          {/* Placeholder for line chart */}
-          <div className="h-80 bg-gradient-to-br from-brand-50 to-brand-100 dark:from-brand-950 dark:to-brand-900 rounded-lg flex items-center justify-center">
-            <div className="text-center">
-              <TrendingUp className="w-12 h-12 text-brand-500 mx-auto mb-3" />
-              <p className="text-muted-foreground">Line Chart Component</p>
-              <p className="text-sm text-muted-foreground">Will be implemented next</p>
-            </div>
+          {/* Revenue Line Chart */}
+          <div className="h-80">
+            <RevenueLineChart />
           </div>
         </div>
 
