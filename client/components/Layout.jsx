@@ -93,7 +93,7 @@ export default function Layout({ children }) {
                 <BarChart3 className="w-5 h-5" />
               </Button>
               
-              <div className="relative">
+              <div className="relative hidden md:block">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <input
                   type="text"
