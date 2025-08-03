@@ -3,6 +3,7 @@ import MetricsCard from "@/components/MetricsCard";
 import RevenueLineChart from "@/components/charts/LineChart";
 import ConversionPieChart from "@/components/charts/PieChart";
 import CampaignBarChart from "@/components/charts/BarChart";
+import DataTable from "@/components/DataTable";
 import {
   DollarSign,
   Users,
