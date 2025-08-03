@@ -189,13 +189,9 @@ export default function Dashboard() {
           </Button>
         </div>
         
-        {/* Placeholder for bar chart */}
-        <div className="h-64 bg-gradient-to-r from-warning/10 via-brand/10 to-info/10 rounded-lg flex items-center justify-center">
-          <div className="text-center">
-            <TrendingUp className="w-12 h-12 text-brand-500 mx-auto mb-3" />
-            <p className="text-muted-foreground">Bar Chart Component</p>
-            <p className="text-sm text-muted-foreground">Will be implemented next</p>
-          </div>
+        {/* Campaign Performance Bar Chart */}
+        <div className="h-64">
+          <CampaignBarChart />
         </div>
       </div>
 
