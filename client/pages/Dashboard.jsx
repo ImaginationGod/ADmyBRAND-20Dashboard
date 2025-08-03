@@ -53,14 +53,29 @@ export default function Dashboard() {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Initial data load
+  useEffect(() => {
+    const loadInitialData = async () => {
+      setIsLoading(true);
+      // Simulate initial API call
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      setData(generateMockData());
+      setIsLoading(false);
+    };
+
+    loadInitialData();
+  }, []);
+
   // Simulate real-time updates
   useEffect(() => {
+    if (!data) return;
+
     const interval = setInterval(() => {
       setData(generateMockData());
     }, 30000); // Update every 30 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [data]);
 
   const handleRefresh = async () => {
     setIsRefreshing(true);
