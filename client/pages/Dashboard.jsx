@@ -54,6 +54,7 @@ export default function Dashboard() {
   const [data, setData] = useState(null);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [activeFilters, setActiveFilters] = useState(null);
 
   // Initial data load
   useEffect(() => {
