@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import MetricsCard from "@/components/MetricsCard";
-import { 
-  DollarSign, 
-  Users, 
-  TrendingUp, 
+import RevenueLineChart from "@/components/charts/LineChart";
+import ConversionPieChart from "@/components/charts/PieChart";
+import CampaignBarChart from "@/components/charts/BarChart";
+import {
+  DollarSign,
+  Users,
+  TrendingUp,
   Target,
   Calendar,
   Download,
