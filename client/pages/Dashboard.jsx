@@ -88,6 +88,12 @@ export default function Dashboard() {
     setIsRefreshing(false);
   };
 
+  const handleFiltersChange = (filters) => {
+    setActiveFilters(filters);
+    // In a real app, this would trigger data refetch with filters
+    console.log("Filters applied:", filters);
+  };
+
   return (
     <div className="p-6 space-y-6">
       {/* Header */}
