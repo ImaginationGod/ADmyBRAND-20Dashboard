@@ -4,6 +4,7 @@ import RevenueLineChart from "@/components/charts/LineChart";
 import ConversionPieChart from "@/components/charts/PieChart";
 import CampaignBarChart from "@/components/charts/BarChart";
 import DataTable from "@/components/DataTable";
+import { MetricsSkeleton, ChartSkeleton, TableSkeleton } from "@/components/LoadingSkeleton";
 import {
   DollarSign,
   Users,
