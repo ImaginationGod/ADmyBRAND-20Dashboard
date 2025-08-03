@@ -38,7 +38,7 @@ export default function MetricsCard({
             }`}>
               {change}
             </span>
-            <span className="text-sm text-muted-foreground flex">vs last month</span>
+            <span className="text-sm text-muted-foreground">vs last month</span>
           </div>
         </div>
         
