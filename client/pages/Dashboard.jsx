@@ -139,6 +139,9 @@ export default function Dashboard() {
         </div>
       </div>
 
+      {/* Advanced Filters Display */}
+      <AdvancedFilters onFiltersChange={handleFiltersChange} />
+
       {/* Metrics Cards */}
       {isLoading ? (
         <MetricsSkeleton />
