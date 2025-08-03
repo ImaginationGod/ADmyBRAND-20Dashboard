@@ -38,4 +38,4 @@ const App = () => (
   </QueryClientProvider>
 );
 
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")).render(<App />);
