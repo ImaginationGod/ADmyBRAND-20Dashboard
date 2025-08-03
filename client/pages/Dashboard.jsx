@@ -208,14 +208,8 @@ export default function Dashboard() {
           </Button>
         </div>
         
-        {/* Placeholder for data table */}
-        <div className="h-64 bg-gradient-to-br from-muted/50 to-accent/50 rounded-lg flex items-center justify-center">
-          <div className="text-center">
-            <Users className="w-12 h-12 text-muted-foreground mx-auto mb-3" />
-            <p className="text-muted-foreground">Data Table Component</p>
-            <p className="text-sm text-muted-foreground">Will be implemented next</p>
-          </div>
-        </div>
+        {/* Campaign Data Table */}
+        <DataTable />
       </div>
 
       {/* Footer */}
