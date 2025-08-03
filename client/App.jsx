@@ -32,6 +32,7 @@ const App = () => (
               <Route path="/analytics" element={<NotFound />} />
               <Route path="/users" element={<NotFound />} />
               <Route path="/revenue" element={<NotFound />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
         </BrowserRouter>
