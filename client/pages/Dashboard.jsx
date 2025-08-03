@@ -164,40 +164,49 @@ export default function Dashboard() {
       )}
 
       {/* Charts Section */}
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
-        {/* Revenue Chart */}
-        <div className="xl:col-span-2 bg-card rounded-xl border p-6">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h3 className="text-lg font-semibold text-foreground">Revenue Trends</h3>
-              <p className="text-sm text-muted-foreground">Monthly revenue performance</p>
-            </div>
-            <Button variant="outline" size="sm">
-              View Details
-            </Button>
+      {isLoading ? (
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+          <div className="xl:col-span-2">
+            <ChartSkeleton />
           </div>
-          
-          {/* Revenue Line Chart */}
-          <div className="h-80">
-            <RevenueLineChart />
-          </div>
+          <ChartSkeleton />
         </div>
+      ) : (
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+          {/* Revenue Chart */}
+          <div className="xl:col-span-2 bg-card rounded-xl border p-6">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h3 className="text-lg font-semibold text-foreground">Revenue Trends</h3>
+                <p className="text-sm text-muted-foreground">Monthly revenue performance</p>
+              </div>
+              <Button variant="outline" size="sm">
+                View Details
+              </Button>
+            </div>
 
-        {/* Conversion Chart */}
-        <div className="bg-card rounded-xl border p-6">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h3 className="text-lg font-semibold text-foreground">Conversions</h3>
-              <p className="text-sm text-muted-foreground">By source</p>
+            {/* Revenue Line Chart */}
+            <div className="h-80">
+              <RevenueLineChart />
             </div>
           </div>
-          
-          {/* Conversion Pie Chart */}
-          <div className="h-80">
-            <ConversionPieChart />
+
+          {/* Conversion Chart */}
+          <div className="bg-card rounded-xl border p-6">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h3 className="text-lg font-semibold text-foreground">Conversions</h3>
+                <p className="text-sm text-muted-foreground">By source</p>
+              </div>
+            </div>
+
+            {/* Conversion Pie Chart */}
+            <div className="h-80">
+              <ConversionPieChart />
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Performance Bar Chart */}
       <div className="bg-card rounded-xl border p-6">
