@@ -251,11 +251,13 @@ export default function Dashboard() {
       )}
 
       {/* Footer */}
-      <div className="text-center py-4">
-        <p className="text-sm text-muted-foreground">
-          Last updated: {data.lastUpdated} • Data refreshes automatically every 30 seconds
-        </p>
-      </div>
+      {!isLoading && (
+        <div className="text-center py-4">
+          <p className="text-sm text-muted-foreground">
+            Last updated: {data.lastUpdated} • Data refreshes automatically every 30 seconds
+          </p>
+        </div>
+      )}
     </div>
   );
 }
