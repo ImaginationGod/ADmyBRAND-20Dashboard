@@ -79,7 +79,7 @@ export default function Layout({ children }) {
       </div>
 
       {/* Main content */}
-      <div className={`lg:pl-64 ${sidebarOpen ? 'pl-64' : 'pl-0'} transition-all duration-200`}>
+      <div className="lg:pl-64">
         {/* Top bar */}
         <header className="bg-card border-b sticky top-0 z-40">
           <div className="flex items-center justify-between h-16 px-6">
