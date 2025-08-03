@@ -209,38 +209,46 @@ export default function Dashboard() {
       )}
 
       {/* Performance Bar Chart */}
-      <div className="bg-card rounded-xl border p-6">
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h3 className="text-lg font-semibold text-foreground">Campaign Performance</h3>
-            <p className="text-sm text-muted-foreground">Compare campaign effectiveness</p>
+      {isLoading ? (
+        <ChartSkeleton height="h-64" />
+      ) : (
+        <div className="bg-card rounded-xl border p-6">
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h3 className="text-lg font-semibold text-foreground">Campaign Performance</h3>
+              <p className="text-sm text-muted-foreground">Compare campaign effectiveness</p>
+            </div>
+            <Button variant="outline" size="sm">
+              Customize
+            </Button>
           </div>
-          <Button variant="outline" size="sm">
-            Customize
-          </Button>
+
+          {/* Campaign Performance Bar Chart */}
+          <div className="h-64">
+            <CampaignBarChart />
+          </div>
         </div>
-        
-        {/* Campaign Performance Bar Chart */}
-        <div className="h-64">
-          <CampaignBarChart />
-        </div>
-      </div>
+      )}
 
       {/* Data Table Section */}
-      <div className="bg-card rounded-xl border p-6">
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h3 className="text-lg font-semibold text-foreground">Recent Campaigns</h3>
-            <p className="text-sm text-muted-foreground">Latest campaign data and metrics</p>
+      {isLoading ? (
+        <TableSkeleton />
+      ) : (
+        <div className="bg-card rounded-xl border p-6">
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h3 className="text-lg font-semibold text-foreground">Recent Campaigns</h3>
+              <p className="text-sm text-muted-foreground">Latest campaign data and metrics</p>
+            </div>
+            <Button variant="outline" size="sm">
+              View All
+            </Button>
           </div>
-          <Button variant="outline" size="sm">
-            View All
-          </Button>
+
+          {/* Campaign Data Table */}
+          <DataTable />
         </div>
-        
-        {/* Campaign Data Table */}
-        <DataTable />
-      </div>
+      )}
 
       {/* Footer */}
       <div className="text-center py-4">
