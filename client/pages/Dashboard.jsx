@@ -49,8 +49,9 @@ const generateMockData = () => ({
 });
 
 export default function Dashboard() {
-  const [data, setData] = useState(generateMockData());
+  const [data, setData] = useState(null);
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Simulate real-time updates
   useEffect(() => {
